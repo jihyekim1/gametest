@@ -300,9 +300,9 @@ export default function TelepathyGame() {
 
   // ── Main render ───────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col">
+    <div className="h-screen overflow-hidden bg-slate-900 flex flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-4 bg-slate-800 border-b border-slate-700">
+      <header className="flex items-center justify-between px-6 py-4 bg-slate-800 border-b border-slate-700 shrink-0">
         <Link href="/" className="text-slate-400 hover:text-white transition-colors text-sm">
           ← 허브
         </Link>
@@ -363,7 +363,7 @@ export default function TelepathyGame() {
       {phase !== 'names' && (
         <div className="flex-1 flex flex-col">
           {/* Round progress bar */}
-          <div className="flex items-center gap-3 px-4 py-3 bg-slate-800 border-b border-slate-700">
+          <div className="flex items-center gap-3 px-4 py-3 bg-slate-800 border-b border-slate-700 shrink-0">
             <span className="text-slate-400 text-sm shrink-0">라운드</span>
             <div className="flex gap-1.5 flex-1">
               {Array.from({ length: TOTAL_ROUNDS }, (_, i) => (

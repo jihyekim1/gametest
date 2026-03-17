@@ -287,9 +287,9 @@ export default function WipeGame() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col">
+    <div className="h-screen overflow-hidden bg-slate-900 flex flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-4 bg-slate-800 border-b border-slate-700">
+      <header className="flex items-center justify-between px-6 py-4 bg-slate-800 border-b border-slate-700 shrink-0">
         <Link href="/" className="text-slate-400 hover:text-white transition-colors text-sm">
           ← 허브
         </Link>
@@ -351,7 +351,7 @@ export default function WipeGame() {
       {phase !== 'names' && (
         <div className="flex-1 flex flex-col">
           {/* Score + round bar */}
-          <div className="flex items-center gap-4 px-4 py-3 bg-slate-800 border-b border-slate-700">
+          <div className="flex items-center gap-4 px-4 py-3 bg-slate-800 border-b border-slate-700 shrink-0">
             <CoverageBar label={`${p1Name} 💙`} color={P1_COLOR} value={leftCoverage} />
             <div className="text-center shrink-0">
               <div className="text-slate-400 font-black text-base">VS</div>
@@ -361,7 +361,7 @@ export default function WipeGame() {
           </div>
 
           {/* Win count dots */}
-          <div className="flex justify-between px-4 py-1.5 bg-slate-800/50 border-b border-slate-700/50">
+          <div className="flex justify-between px-4 py-1.5 bg-slate-800/50 border-b border-slate-700/50 shrink-0">
             <div className="flex gap-1">
               {Array.from({ length: TOTAL_ROUNDS }, (_, i) => (
                 <div key={i} className={`w-3 h-3 rounded-full ${i < p1Wins ? 'bg-blue-500' : 'bg-slate-700'}`} />

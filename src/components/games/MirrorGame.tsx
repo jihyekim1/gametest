@@ -247,9 +247,9 @@ export default function MirrorGame() {
   const simColor = similarity >= SYNC_THRESHOLD ? '#4ade80' : similarity >= 50 ? '#fbbf24' : '#f87171';
 
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col">
+    <div className="h-screen overflow-hidden bg-slate-900 flex flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-4 bg-slate-800 border-b border-slate-700">
+      <header className="flex items-center justify-between px-6 py-4 bg-slate-800 border-b border-slate-700 shrink-0">
         <Link href="/" className="text-slate-400 hover:text-white transition-colors text-sm">
           ← 허브
         </Link>
@@ -310,7 +310,7 @@ export default function MirrorGame() {
       {phase !== 'names' && (
         <div className="flex-1 flex flex-col">
           {/* Top HUD */}
-          <div className="flex items-center justify-between px-6 py-3 bg-slate-800 border-b border-slate-700">
+          <div className="flex items-center justify-between px-6 py-3 bg-slate-800 border-b border-slate-700 shrink-0">
             <span className="text-blue-400 font-bold text-sm">{p1Name}</span>
             <div className="flex items-center gap-3">
               <span className="text-slate-400 text-sm">⏱</span>
